@@ -66,7 +66,7 @@ btnHold.addEventListener("click", function () {
     totalScores[currentPlayer] += currentScore;
     document.getElementById(`score--${currentPlayer}`).textContent =
       totalScores[currentPlayer];
-    if (totalScores[currentPlayer] >= 50) {
+    if (totalScores[currentPlayer] >= 100) {
       currentScore = 0;
       resetCrntScr();
       document
