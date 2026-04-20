@@ -3,6 +3,10 @@
 const btnGenerate = document.querySelector(".btn--generate");
 const btnHold = document.querySelector(".btn--hold");
 const btnNew = document.querySelector(".btn--new");
+const btnHow = document.querySelector(".btn--how");
+const model = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close-modal");
 
 const number = document.getElementById("number");
 const crntScr0 = document.getElementById("current--0");
@@ -80,6 +84,23 @@ btnHold.addEventListener("click", function () {
       switchPlayer();
     }
   }
+});
+
+btnHow.addEventListener("click", function () {
+  model.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+
+function removeModal() {
+  model.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+closeModal.addEventListener("click", removeModal);
+overlay.addEventListener("click", removeModal);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !model.classList.contains("hidden"))
+    removeModal();
 });
 
 btnNew.addEventListener("click", init);

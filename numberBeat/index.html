@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>How to play?</h1>
+      <p>
+        <b>Number Battle</b> ⚔️ is a simple two-player strategy game built with
+        JavaScript, where luck and decision-making go hand in hand. Players take
+        turns generating a random number between 1 and 10. Each number (except
+        1) adds to the player’s current score for that turn. However, if a
+        player generates a 1, they lose all the points accumulated in that round
+        and their turn immediately ends. At any point during their turn, a
+        player can choose to “Hold,” which safely adds their current score to
+        their total score and passes the turn to the other player. The challenge
+        lies in deciding when to stop and secure points, or continue generating
+        numbers and risk losing everything. The first player to reach 50 total
+        points wins the game, making every turn a balance between risk and
+        strategy.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
     <div class="game">
       <h1>Number Battle ⚔️</h1>
 
@@ -30,6 +49,7 @@
         <button class="btn--generate">Generate</button>
         <button class="btn--hold">Hold</button>
         <button class="btn--new">New Game</button>
+        <button class="btn--how">How to play?</button>
       </div>
     </div>
 
