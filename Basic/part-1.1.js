@@ -83,13 +83,13 @@
 
 // calcTip();
 
-function printForecast(arr) {
-  let output = "...";
-  for (let i = 0; i < arr.length; i++) {
-    output += `${arr[i]} degree C in ${i + 1} days...`;
-  }
-  console.log(output);
-}
+// function printForecast(arr) {
+//   let output = "...";
+//   for (let i = 0; i < arr.length; i++) {
+//     output += `${arr[i]} degree C in ${i + 1} days...`;
+//   }
+//   console.log(output);
+// }
 
-const arr = [12, 5, -5, 0, 4];
-printForecast(arr);
+// const arr = [12, 5, -5, 0, 4];
+// printForecast(arr);
