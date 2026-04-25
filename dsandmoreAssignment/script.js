@@ -246,33 +246,113 @@ const books = [
 //   ratingStars;
 // console.log(fiveStarRating, threeStarRating, oneStarRating);
 
-const { title, author, ISBN } = books[0];
-// console.log(title, author, ISBN);
-// const [tags] = books;
-// console.log(tags);
+// const { title, author, ISBN } = books[0];
+// // console.log(title, author, ISBN);
+// // const [tags] = books;
+// // console.log(tags);
 
-const { keywords: tag } = books[0];
-// console.log(tag);
+// const { keywords: tag } = books[0];
+// // console.log(tag);
 
-const { language, programmingLanguage = "unknown" } = books[6];
-// console.log(language, programmingLanguage);
+// const { language, programmingLanguage = "unknown" } = books[6];
+// // console.log(language, programmingLanguage);
 
-let bookTitle = "unknown";
-let bookAuthor = "unknown";
+// let bookTitle = "unknown";
+// let bookAuthor = "unknown";
 
-({ title: bookTitle, author: bookAuthor } = books[0]);
+// ({ title: bookTitle, author: bookAuthor } = books[0]);
 
-// console.log(bookTitle, bookAuthor);
+// // console.log(bookTitle, bookAuthor);
 
-const {
-  thirdParty: {
-    goodreads: { rating: bookRaitng },
-  },
-} = books[0];
+// const {
+//   thirdParty: {
+//     goodreads: { rating: bookRaitng },
+//   },
+// } = books[0];
 
-// console.log(bookRaitng);
+// // console.log(bookRaitng);
 
-function printBookInfo({ title, author, year = "year unknown" }) {
-  console.log(`${title} by ${author}, ${year}`);
-}
-printBookInfo({ title: "Algorithms", author: "Robert Sedgewick" });
+// function printBookInfo({ title, author, year = "year unknown" }) {
+//   // console.log(`${title} by ${author}, ${year}`);
+// }
+// printBookInfo({ title: "Algorithms", author: "Robert Sedgewick" });
+
+// const bookAuthors = [...books[0].author, ...books[1].author];
+// console.log(bookAuthors);
+
+// function spellWord(word) {
+//   console.log(...word);
+// }
+
+// spellWord("Javascript");
+
+// const [mainKeyword, ...rest] = books[0].keywords;
+// console.log(mainKeyword, rest);
+
+// const { publisher: bookPublisher, ...restOfTheBook } = books[1];
+// console.log(bookPublisher, restOfTheBook);
+
+// function printBookAuthorsCount(title, ...authors) {
+//   console.log(`The book "${title}" has ${authors.length} authors`);
+// }
+
+// printBookAuthorsCount("Algorithms", "Robert Sedgewick", "Kevin Wayne");
+
+// function hasExamplesInJava(book) {
+//   console.log(book.programmingLanguage === "Java" || "no data available");
+// }
+// hasExamplesInJava(books[3]);
+
+// for (let i = 0; i < books.length; i++) {
+//   books[i].onlineContent &&
+//     console.log(`"${books[i].title}" provides online content`);
+// }
+
+// for (let i = 0; i < books.length; i++) {
+//   books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
+//   console.log(books[i].highlighted);
+// }
+
+// let pageSum = 0;
+// for (let book of books) pageSum += book.pages;
+// console.log(pageSum);
+
+// const allAuthors = [];
+
+// for (const book of books) {
+//   typeof book.author === "string"
+//     ? allAuthors.push(book.author)
+//     : allAuthors.push(...book.author);
+// }
+
+// for (const [i, author] of allAuthors.entries())
+//   console.log(`${i + 1}. ${author}`);
+
+const bookData = [
+  ["title", "Computer Networking: A Top-Down Approach"],
+  ["author", ["James F. Kurose", "Keith W. Ross"]],
+  ["publisher", "Addison Wesley"],
+];
+
+// // Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+};
+// // console.log(newBook);
+
+const pages = 880;
+
+const newBook2 = {
+  title: "The C Programming Language",
+  author: ["Brian W. Kernighan", "Dennis M. Ritchie"],
+  pages,
+};
+
+// console.log(newBook2);
+
+// function getFirstKeyword(book) {
+//   console.log(book.keywords?.[0]);
+// }
+// getFirstKeyword(newBook2); // from previous tasks
